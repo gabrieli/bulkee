@@ -1,6 +1,6 @@
 {
   "name": "bulkee",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Manage your in-memory bulk. Useful for transforming multiple calls into one bulk async call",
   "main": "src/index.js",
   "scripts": {
