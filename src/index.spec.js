@@ -1,7 +1,7 @@
 const Bulkee = require('.')
 
 const addToQueue = jest.fn()
-describe('In a suite of tests concerning mParticle bulk management', () => {
+describe('Bulkee', () => {
   const size = 10
   let bulkee
   const batch = { someImportantData: 'sky is blue' }
