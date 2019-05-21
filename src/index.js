@@ -26,6 +26,10 @@ class Bulkee {
     clearTimeout(this.timeout)
     this.timeout = setTimeout(this.process.bind(this), this.processInterval)
   }
+  endTimer() {
+    clearTimeout(this.timeout)
+    this.processInterval = 0
+  }
   add(item) {
     this._bulk.push(item)
     const maxBulkSize = Bulkee.overwrittenSize || this.size

@@ -35,5 +35,12 @@ describe('Bulkee', () => {
       await wait(10)
       expect(timedBulkee.bulk.length).toBe(0)
     })
+    it('Stops timed processing if endTimer is called', async () => {
+      const timedBulkee = new Bulkee(addToQueue, { size, processInterval: 1 })
+      timedBulkee.endTimer()
+      timedBulkee.add(batch)
+      await wait(10)
+      expect(timedBulkee.bulk.length).toBe(1)
+    })
   })
 })
